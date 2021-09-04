@@ -1,0 +1,48 @@
+Lesson 00 Notes:
+
+Mutability must be explicitly declared
+
+Default types for numeric literals: i32 and f64
+
+Slices are array "subviews"
+
+String Interpolation Operators: 
+	Basic: {}
+	e.g. println!("{}",5);
+	
+	Hex: {:x}
+	
+	Debug: {:?}
+	e.g. println!("{:?}", [1, 2, 3]);
+	Note: some types, such as arrays and Vecs can only be printed via debug
+	
+Unit (nothing) in Rust is type () with value ()
+	It is the return type and value of expressions ending in semi-colon
+	i.e. omit semicolon, and expression's evaluated value is returned
+	can't omit semicolon in variable binding statements (let)
+
+All arms of if-statements must have same type.
+
+Function references can be used to rename functions, or as arguments for other functions.
+	e.g. apply_twice  f(f(x))
+	See slide 44	
+	
+Match is a switch-statement on steroids!
+	See slide 52 and 53
+
+Crates.io is where people in the Rust ecosystem post their open source Rust projects for others to use.
+	
+###COMMANDS:
+
+rustc --version		//check rust version
+cargo --version		//check cargo version
+rustc main.rs		//compile rs file
+cargo new --bin hw00   //creates project dir hw00
+cargo new --lib mylib
+cargo build
+cargo run
+cargo test
+cargo test -- --nocapture //to be able to see printed output of successful tests
+cargo doc --open //will build documentation provided by all of your dependencies locally and open it in your browser
+git clone https://github.com/cis198-2016s/hw02.git hw02
+

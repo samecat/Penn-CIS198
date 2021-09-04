@@ -1,0 +1,17 @@
+Lesson 02 Notes
+
+Mutability is a property of the variable binding, not the type.
+
+Structs and enums have their methods (functions) implemented in impl block
+	The first argument for each of these functions is "self"
+	e.g. &self, &mut self, or self
+	i.e. Methods are a special case of function in Rust because of the self argument, which doesn't have a declared type
+
+Use if-let to rewrite one-arm match statements (does pattern matching and binding in one statement)
+	Use while-let if need to do the same, but with loop
+	
+Use @ for inner-bindings
+
+Any struct or enum that contains a reference must have an explicit lifetime. (e.g. 'a)
+
+###Internals of an enum are public

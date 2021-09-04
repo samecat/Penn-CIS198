@@ -1,0 +1,32 @@
+Lesson 01 Notes
+
+Binding grants ownership of data to variable
+	A piece of data can only have one owner at a time
+
+Data can be borrowed (&), and while borrowed, ownership cannot be transferred
+
+References, like bindings, are immutable by default
+	Borrowing by mutable reference: &mut
+	
+Updating mutable borrow of mutable variable, updates data of "both"
+
+Dereference variables (*) when writing into them or using the with operators that don't support "&mut <primitive>"
+
+On Match statements, use "ref" and "ref mut" to make left variable a reference assignment
+	(instead of using & on right variable)
+	
+***PRIMITIVE TYPES ARE COPIED NOT MOVED
+
+***HOLY GRAIL OF BORROWING:
+-You can't keep borrowing something after it stops existing.
+-One object may have many immutable references to it (&T).
+-OR exactly one mutable reference (&mut T) (not both).
+
+BORROWING PREVENTS:
+Iterator invalidation due to mutating a collection you're iterating over 
+	e.g. for v in &vs {vs.pop();}
+Use After Free
+
+Loops can either borrow vectors (in &vs || in &mut vs) 
+	or take ownership over them (in vs)
+
